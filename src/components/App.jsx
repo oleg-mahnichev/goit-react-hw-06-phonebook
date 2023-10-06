@@ -42,15 +42,12 @@ export function App() {
 
   const filteredContacts = getFilteredContacts();
 
-  useEffect(() => {
-    // Очищаем локальное хранилище, если необходимо сбросить данные
-    // persistor.purge();
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="App">
       <span>
-        <HeaderTitle>Телефонная книга</HeaderTitle>
+        <HeaderTitle>Телефонна книга</HeaderTitle>
       </span>
       <PersistGate loading={null} persistor={persistor}>
         <ContactForm
@@ -58,7 +55,7 @@ export function App() {
           isNameAlreadyExists={isNameAlreadyExists}
         />
         <span>
-          <ContactsTitle>Контакты</ContactsTitle>
+          <ContactsTitle>Контакти</ContactsTitle>
         </span>
         <Filter value={filter} onChange={handleFilterChange} />
         <ContactList
